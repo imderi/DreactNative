@@ -1,7 +1,7 @@
 import React from 'react'
 import {View, Text} from 'react-native'
 
-const index = () => {
+const LoginScreen = () => {
     return (
         <View>
             <Text>Login Page</Text>
@@ -18,4 +18,4 @@ const index = () => {
     )
 }
 
-export default index
+export default LoginScreen
