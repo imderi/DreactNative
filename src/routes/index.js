@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
+import { CardStyleInterpolators, createStackNavigator, HeaderStyleInterpolators } from '@react-navigation/stack';
 // import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View } from 'react-native';
@@ -46,6 +46,7 @@ const Routes = () => {
                     name="Search"
                     component={SearchScreen}
                     options={{
+                        headerShown: false,
                         headerTitleAlign: "left",
                         headerBackTitleVisible: false,
                         cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid

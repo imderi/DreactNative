@@ -8,7 +8,7 @@ const PHOTOS = Array.from({ length: 25 }).map(
 
 const ExploreScreen = () => {
     const PHOTOS = Array.from({ length: 24 }).map(
-        (_, i) => `https://unsplash.it/300/300/?random&__id=${route.key}${i}`
+        (_, i) => `https://unsplash.it/300/300/?random&__id=${i}`
     );
 
     return (
@@ -34,7 +34,11 @@ const styles = StyleSheet.create({
     item: {
         width: '100%',
         height: 150,
-    }
+    },
+    photo: {
+        flex: 1,
+        resizeMode: 'cover',
+    },
 })
 
 export default ExploreScreen
