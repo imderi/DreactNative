@@ -1,10 +1,13 @@
 import React from 'react';
-
-import Routes from './src/routes/index'
+import FlashMessage from 'react-native-flash-message';
+import Routes from './src/routes/index';
 
 function App() {
   return (
-    <Routes />
+    <>
+      <Routes />
+      <FlashMessage position="top" />
+    </>
   );
 }
 
