@@ -7,7 +7,7 @@ import { showMessage } from "react-native-flash-message";
 const HomeScreen = () => {
     return (
         <View>
-            <Text>Home Page</Text>
+            <Text>Home Screen</Text>
             <Button mode="contained" onPress={() => {
                 showMessage({
                     message: "Flash Message",

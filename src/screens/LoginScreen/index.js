@@ -4,16 +4,7 @@ import {View, Text} from 'react-native'
 const LoginScreen = () => {
     return (
         <View>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
-            <Text>Login Page</Text>
+            <Text>Login Screen</Text>
         </View>
     )
 }
