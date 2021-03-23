@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, ScrollView } from 'react-native'
-import { List, Text } from 'react-native-paper'
+import { List, Text, Divider } from 'react-native-paper'
 
 const SettingsScreen = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import { CardStyleInterpolators, createStackNavigator, HeaderStyleInterpolators } from '@react-navigation/stack';
 // import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -26,7 +26,7 @@ const Tab = createBottomTabNavigator();
 
 const Routes = () => {
     return (
-        <NavigationContainer>
+        <NavigationContainer >
             <Stack.Navigator>
                 <Stack.Screen
                     name="Menu Routes"
@@ -39,7 +39,7 @@ const Routes = () => {
                                 <IconButton size={26} icon="magnify" onPress={() => navigate("Search")} />
                                 <IconButton size={26} icon="account-circle" onPress={() => navigate("Account")} />
                             </View>
-                        )
+                        ),
                     })}
                 />
                 <Stack.Screen
@@ -49,7 +49,7 @@ const Routes = () => {
                         headerShown: false,
                         headerTitleAlign: "left",
                         headerBackTitleVisible: false,
-                        cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid
+                        // cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid
                     }}
                 />
                 <Stack.Screen
