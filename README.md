@@ -7,6 +7,7 @@ including some library such as :
 - asyncstorage
 - react native vector icons
 - react native flash message
+- react-navigation-addon-search-layout
 
 ## Installation
 For Android :
