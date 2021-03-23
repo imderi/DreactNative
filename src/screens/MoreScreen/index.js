@@ -1,12 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Text } from 'react-native-paper';
 
 const MoreScreen = () => {
     return (
-        <View>
+        <ScrollView>
             <Text>More Screen</Text>
-        </View>
+        </ScrollView>
     )
 }
 

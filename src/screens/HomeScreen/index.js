@@ -1,12 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { Text, Button } from 'react-native-paper';
 
 import { showMessage } from "react-native-flash-message";
 
 const HomeScreen = () => {
     return (
-        <View>
+        <ScrollView
+            style={styles.container}
+            contentContainerStyle={styles.content}
+        >
             <Text>Home Screen</Text>
             <Button mode="contained" onPress={() => {
                 showMessage({
@@ -14,8 +17,17 @@ const HomeScreen = () => {
                     type: "info"
                 })
             }}>Flash Message</Button>
-        </View>
+        </ScrollView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    },
+    content: {
+        padding: 4
+    }
+})
 
 export default HomeScreen
