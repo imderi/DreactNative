@@ -16,6 +16,7 @@ import AccountScreen from '../screens/AccountScreen';
 import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import MoreScreen from '../screens/MoreScreen';
 // == PAGES *
 
 // NAVIGATOR TYPES
@@ -45,6 +46,7 @@ const Routes = () => {
                     name="Search"
                     component={SearchScreen}
                     options={{
+                        headerTitleAlign: "left",
                         headerBackTitleVisible: false,
                         cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid
                     }}
@@ -86,7 +88,7 @@ const MenuRoutes = () => {
         >
             <Tab.Screen name="Home" component={DashboardRoutes} />
             <Tab.Screen name="Explore" component={ExploreRoutes} />
-            <Tab.Screen name="More" component={SettingsRoutes} />
+            <Tab.Screen name="More" component={MoreRoutes} />
         </Tab.Navigator>
     )
 }
@@ -110,7 +112,7 @@ const ExploreRoutes = () => {
 const MoreRoutes = () => {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="More" component={SettingsScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="More" component={MoreScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
     )
 }
