@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import { Chip } from 'react-native-paper';
 
 const App = () => (
   <View>
-    <Text>Hallo</Text>
+    <Chip icon="information" onPress={() => console.log('Pressed')}>Example Chip</Chip>
   </View>
 );
 
