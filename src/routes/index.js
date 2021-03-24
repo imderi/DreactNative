@@ -49,6 +49,7 @@ const Routes = () => {
                         headerShown: false,
                         headerTitleAlign: "left",
                         headerBackTitleVisible: false,
+                        cardStyleInterpolator: CardStyleInterpolators.forModalPresentationIOS
                     }}
                 />
                 <Stack.Screen
