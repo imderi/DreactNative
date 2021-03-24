@@ -8,8 +8,6 @@ import { IconButton } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 // == PAGES *
-import LoginScreen from '../screens/LoginScreen';
-
 import SearchScreen from '../screens/SearchScreen';
 import AccountScreen from '../screens/AccountScreen';
 
@@ -17,6 +15,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import MoreScreen from '../screens/MoreScreen';
+import SignInScreen from '../screens/SignInScreen';
 // == PAGES *
 
 // NAVIGATOR TYPES
@@ -60,6 +59,13 @@ const Routes = () => {
                         headerBackTitleVisible: false,
                         headerBackImage: () => (<IconButton icon="close" />),
                         cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="SignIn"
+                    component={SignInScreen}
+                    options={{
+                        headerShown: false
                     }}
                 />
             </Stack.Navigator>
@@ -122,6 +128,14 @@ const SettingsRoutes = () => {
     return (
         <Stack.Navigator>
             <Stack.Screen name="Settings" component={SettingsScreen} options={{ headerShown: false }} />
+        </Stack.Navigator>
+    )
+}
+
+const AuthRoutes = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Login" component={LoginScreen} />
         </Stack.Navigator>
     )
 }

@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import {SafeAreaView, ScrollView, TextInput, StyleSheet} from 'react-native';
-import {Text, Button, Searchbar, Appbar} from 'react-native-paper';
+import React, { useState, useEffect } from 'react';
+import { SafeAreaView, ScrollView, TextInput, StyleSheet } from 'react-native';
+import { Text, Button, Searchbar, Appbar } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const SearchScreen = ({navigation}) => {
+const SearchScreen = ({ navigation }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
@@ -11,7 +11,7 @@ const SearchScreen = ({navigation}) => {
       <Searchbar
         style={styles.searchbar}
         onIconPress={() => navigation.goBack()}
-        icon={({color, size}) => (
+        icon={({ color, size }) => (
           <Icon name="ios-chevron-back" size={size} color={color} />
         )}
         placeholder="Search"
@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   searchbar: {
-    // height: 43,
     shadowOpacity: 0,
   },
 });
