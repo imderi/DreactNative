@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white"
     },
     searchbar: {
-        height: 43,
+        // height: 43,
         shadowOpacity: 0,
     }
 })
