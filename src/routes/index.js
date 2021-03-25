@@ -15,7 +15,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import MoreScreen from '../screens/MoreScreen';
-import SignInScreen from '../screens/SignInScreen';
+import SignInScreen from '../screens/AuthScreen/SignInScreen';
 // == PAGES *
 
 // NAVIGATOR TYPES
