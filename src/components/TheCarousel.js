@@ -60,10 +60,6 @@ const TheCarousel = props => {
                 itemWidth={screenWidth - 60}
                 data={entries}
                 renderItem={renderItem}
-                loop={true}
-                autoplay={true}
-                autoplayDelay={2000}
-                autoplayInterval={4000}
             />
         </View>
     );

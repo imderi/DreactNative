@@ -1,7 +1,15 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { Text, Button } from 'react-native-paper';
 import TheCarousel from '../../components/TheCarousel'
+
+const HomeItem = () => {
+    return (
+        <View>
+            <Text>Home Item</Text>
+        </View>
+    )
+}
 
 const HomeScreen = ({ navigation: { navigate } }) => {
     return (
@@ -13,6 +21,7 @@ const HomeScreen = ({ navigation: { navigate } }) => {
             <Button onPress={() => navigate('SignIn')} >
                 Login Screen
             </Button>
+            <HomeItem />
         </ScrollView>
     )
 }
