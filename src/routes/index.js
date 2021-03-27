@@ -7,7 +7,7 @@ import { View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-// == PAGES *
+// == SCREENS
 import SearchScreen from '../screens/SearchScreen';
 import AccountScreen from '../screens/AccountScreen';
 
@@ -16,11 +16,11 @@ import ExploreScreen from '../screens/ExploreScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import MoreScreen from '../screens/MoreScreen';
 import SignInScreen from '../screens/AuthScreen/SignInScreen';
-// == PAGES *
+// == SCREENS
 
-// == OTHER ROUTES *
+// == OTHER ROUTES
 import AuthRoutes from './AuthRoutes';
-// == OTHER ROUTES *
+// == OTHER ROUTES
 
 // NAVIGATOR TYPES
 const Stack = createStackNavigator();

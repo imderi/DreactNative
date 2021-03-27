@@ -2,12 +2,12 @@ import React from 'react';
 import { SafeAreaView, View, ScrollView, Text, StyleSheet, TextBase } from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
 
-const SignInScreen = ({ navigation: { goBack } }) => {
+const SignInScreen = ({ navigation }) => {
     return (
-        <SafeAreaView>
-            <ScrollView
-                contentContainerStyle={styles.content}
-            >
+        <ScrollView
+            contentContainerStyle={styles.content}
+        >
+            <SafeAreaView>
                 <View style={styles.header}>
                     <Text>SIGN IN</Text>
                     <Text style={styles.headerTitle}>Welcome</Text>
@@ -20,16 +20,16 @@ const SignInScreen = ({ navigation: { goBack } }) => {
                             forceTextInputFocus={false}
                         />
                     } />
-                    <Button mode="contained" onPress={() => goBack()}>SIGN IN</Button>
-                    <Text>Haven't registered yet? SIGN UP</Text>
-                    <Text>Forgot Password?</Text>
+                    <Button mode="contained" onPress={() => navigation.goBack()}>SIGN IN</Button>
+                    <Text onPress={() => navigation.navigate('SignUpScreen')}>Haven't registered yet? SIGN UP</Text>
+                    <Text onPress={() => navigation.navigate('ForgotPasswordScreen')}>Forgot Password?</Text>
                 </View>
                 <View style={styles.devintro}>
                     <Text>developer options</Text>
                     <Text>Back to Into</Text>
                 </View>
-            </ScrollView>
-        </SafeAreaView>
+            </SafeAreaView>
+        </ScrollView>
     )
 }
 

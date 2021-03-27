@@ -2,7 +2,7 @@ import React from 'react';
 import { View, ScrollView, Image, StyleSheet } from 'react-native';
 import { Text } from 'react-native-paper';
 
-const PHOTOS = Array.from({ length: 25 }).map(
+const PHOTOS = Array.from({ length: 20 }).map(
     (item, index) => `https://unsplash.it/300/300/?random&__id=${index}`
 )
 
@@ -31,9 +31,15 @@ const styles = StyleSheet.create({
     content: {
         padding: 4
     },
-    item: {
+    grid: {
         width: '100%',
-        height: 150,
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
+    item: {
+        width: '48%',
+        margin: '1%',
+        aspectRatio: 1,
     },
     photo: {
         flex: 1,

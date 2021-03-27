@@ -3,13 +3,8 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { Text, Button } from 'react-native-paper';
 import TheCarousel from '../../components/TheCarousel'
 
-const HomeItem = () => {
-    return (
-        <View>
-            <Text>Home Item</Text>
-        </View>
-    )
-}
+// Components
+import HomeCards from '../../components/HomeCards'
 
 const HomeScreen = ({ navigation: { navigate } }) => {
     return (
@@ -18,10 +13,7 @@ const HomeScreen = ({ navigation: { navigate } }) => {
             contentContainerStyle={styles.content}
         >
             <TheCarousel />
-            <Button onPress={() => navigate('AuthRoutes')} >
-                Login Screen
-            </Button>
-            <HomeItem />
+            <HomeCards />
         </ScrollView>
     )
 }
