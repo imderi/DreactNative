@@ -18,6 +18,10 @@ import MoreScreen from '../screens/MoreScreen';
 import SignInScreen from '../screens/AuthScreen/SignInScreen';
 // == PAGES *
 
+// == OTHER ROUTES *
+import AuthRoutes from './AuthRoutes';
+// == OTHER ROUTES *
+
 // NAVIGATOR TYPES
 const Stack = createStackNavigator();
 // const Drawer = createDrawerNavigator();
@@ -62,8 +66,8 @@ const Routes = () => {
                     }}
                 />
                 <Stack.Screen
-                    name="SignIn"
-                    component={SignInScreen}
+                    name="AuthRoutes"
+                    component={AuthRoutes}
                     options={{
                         headerShown: false
                     }}
@@ -128,14 +132,6 @@ const SettingsRoutes = () => {
     return (
         <Stack.Navigator>
             <Stack.Screen name="Settings" component={SettingsScreen} options={{ headerShown: false }} />
-        </Stack.Navigator>
-    )
-}
-
-const AuthRoutes = () => {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen name="Login" component={LoginScreen} />
         </Stack.Navigator>
     )
 }

@@ -18,7 +18,7 @@ const HomeScreen = ({ navigation: { navigate } }) => {
             contentContainerStyle={styles.content}
         >
             <TheCarousel />
-            <Button onPress={() => navigate('SignIn')} >
+            <Button onPress={() => navigate('AuthRoutes')} >
                 Login Screen
             </Button>
             <HomeItem />
