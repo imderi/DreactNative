@@ -10,18 +10,18 @@ const HomeCards = () => {
         { title: "Auth Screen", content: "🔐", navigate: "AuthRoutes" },
         { title: "I need ideas", content: "🤔" },
         { title: "I need ideas", content: "🤔" },
-        { title: "I need ideas", content: "🤔"},
+        { title: "I need ideas", content: "🤔" },
     ]
 
     return (
-        <View style={styles.grid}>
+        <View style={styles.grid} >
             {
-                cardData.map((item) => (
-                    <Card style={styles.card} onPress={item.navigate ? () => navigation.navigate(item.navigate):console.log("Need ideas")}>
+                cardData.map((item, index) => (
+                    <Card style={styles.card} key={index} onPress={() => { item.navigate ? navigation.navigate(item.navigate) : console.log("Need ideas") }}>
                         {/* <Card.Title title={item.title} /> */}
                         <Card.Content style={styles.style}>
-                            <Text style={{fontSize:35}}>{item.content}</Text>
-                            <Text style={{fontSize:21,fontWeight:'500', paddingTop: 10}}>{item.title}</Text>
+                            <Text style={{ fontSize: 35 }}>{item.content}</Text>
+                            <Text style={{ fontSize: 21, fontWeight: '500', paddingTop: 10 }}>{item.title}</Text>
                         </Card.Content>
                         {/* <Card.Actions>
                             <Button>This is Button</Button>

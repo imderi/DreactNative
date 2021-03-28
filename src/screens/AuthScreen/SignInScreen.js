@@ -21,12 +21,11 @@ const SignInScreen = ({ navigation }) => {
                         />
                     } />
                     <Button mode="contained" onPress={() => navigation.goBack()}>SIGN IN</Button>
+                </View>
+
+                <View style={styles.row} >
                     <Text onPress={() => navigation.navigate('SignUpScreen')}>Haven't registered yet? SIGN UP</Text>
                     <Text onPress={() => navigation.navigate('ForgotPasswordScreen')}>Forgot Password?</Text>
-                </View>
-                <View style={styles.devintro}>
-                    <Text>developer options</Text>
-                    <Text>Back to Into</Text>
                 </View>
             </SafeAreaView>
         </ScrollView>
@@ -50,8 +49,10 @@ const styles = StyleSheet.create({
     inputContainerStyle: {
         marginBottom: 20,
     },
-    devintro: {
-        paddingTop: 30
-    }
+    row: {
+        flex: 1,
+        alignItems: 'center',
+        paddingTop: 30,
+    },
 })
 export default SignInScreen

@@ -8,9 +8,8 @@ const MoreScreen = () => {
             style={styles.container}
             contentContainerStyle={styles.content}
         >
-            <View style={styles.center}>
-                <Image source={require('../../../assets/images/meme.png')} />
-            </View>
+            <Text>Gimme feedback! prreasee!</Text>
+            <Image source={require('../../../assets/images/meme.png')} />
         </ScrollView>
     )
 }
@@ -20,12 +19,10 @@ const styles = StyleSheet.create({
         flex: 1
     },
     content: {
-        padding: 4
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
-    center: {
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
 })
 
 export default MoreScreen
