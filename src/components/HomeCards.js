@@ -7,24 +7,25 @@ const HomeCards = () => {
     const navigation = useNavigation();
 
     const cardData = [
-        { title: "Auth Screen", content: "content", navigate: "AuthRoutes" },
-        { title: "Auth Screen 2", content: "content", navigate: "AuthRoutes" },
-        { title: "Auth Screen 3", content: "content", navigate: "AuthRoutes" },
-        { title: "Auth Screen 4", content: "content", navigate: "AuthRoutes" },
+        { title: "Auth Screen", content: "🔐", navigate: "AuthRoutes" },
+        { title: "I need ideas", content: "🤔" },
+        { title: "I need ideas", content: "🤔" },
+        { title: "I need ideas", content: "🤔"},
     ]
 
     return (
         <View style={styles.grid}>
             {
                 cardData.map((item) => (
-                    <Card style={styles.card} onPress={() => navigation.navigate(item.navigate)}>
-                        <Card.Title title={item.title} />
-                        <Card.Content>
-                            <Text>{item.content}</Text>
+                    <Card style={styles.card} onPress={item.navigate ? () => navigation.navigate(item.navigate):console.log("Need ideas")}>
+                        {/* <Card.Title title={item.title} /> */}
+                        <Card.Content style={styles.style}>
+                            <Text style={{fontSize:35}}>{item.content}</Text>
+                            <Text style={{fontSize:21,fontWeight:'500', paddingTop: 10}}>{item.title}</Text>
                         </Card.Content>
-                        <Card.Actions>
-                            {/* <Button>View</Button> */}
-                        </Card.Actions>
+                        {/* <Card.Actions>
+                            <Button>This is Button</Button>
+                        </Card.Actions> */}
                     </Card>
                 ))
             }
@@ -43,7 +44,12 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         width: '48%',
         margin: '1%',
-        aspectRatio: 2,
+        aspectRatio: 1.5,
+    },
+    style: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })
 
