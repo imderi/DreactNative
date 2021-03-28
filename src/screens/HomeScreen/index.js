@@ -13,7 +13,7 @@ const HomeScreen = ({ navigation: { navigate } }) => {
             contentContainerStyle={styles.content}
         >
             <TheCarousel />
-            <HomeCards />
+            <HomeCards navigation={navigate} />
         </ScrollView>
     )
 }
