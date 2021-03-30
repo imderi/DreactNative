@@ -1,5 +1,7 @@
 # Dreact Native Sample
 
+(./images/Sample.gif)
+
 Dreact Native Sample is React Native template that ready to use for iOS & Android.
 including some library such as :
 - react native paper
