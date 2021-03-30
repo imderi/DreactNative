@@ -9,7 +9,7 @@ const MoreScreen = () => {
             contentContainerStyle={styles.content}
         >
             <Text>Gimme feedback! prreasee!</Text>
-            <Image source={require('../../../assets/images/meme.png')} />
+            <Image source={require('../../images/meme.png')} />
         </ScrollView>
     )
 }
