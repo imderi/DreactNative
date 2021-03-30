@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-// PAGES
+// SCREENS
 import SignInScreen from '../screens/AuthScreen/SignInScreen';
 import SignUpScreen from '../screens/AuthScreen/SignUpScreen';
-import ForgotPasswordScreen from '../screens/AuthScreen/ForgotPasswordScreen';
+import ResetPasswordScreen from '../screens/AuthScreen/ResetPasswordScreen';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +13,7 @@ const AuthRoutes = () => {
         <Stack.Navigator>
             <Stack.Screen name="SignInScreen" component={SignInScreen} />
             <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
-            <Stack.Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen} />
+            <Stack.Screen name="ForgotPasswordScreen" component={ResetPasswordScreen} />
         </Stack.Navigator>
     )
 }

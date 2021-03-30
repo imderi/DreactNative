@@ -2,30 +2,23 @@ import React from 'react';
 import { SafeAreaView, View, ScrollView, Text, StyleSheet, TextBase } from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
 
-const SignInScreen = ({ navigation }) => {
+const ForgotPasswordScreen = ({ navigation }) => {
     return (
         <ScrollView
             contentContainerStyle={styles.content}
         >
             <SafeAreaView>
                 <View style={styles.header}>
-                    <Text>SIGN IN</Text>
-                    <Text style={styles.headerTitle}>Welcome</Text>
+                    <Text style={styles.headerTitle}>RESET PASSWORD</Text>
+                    <Text>Enter your email to reset your password</Text>
                 </View>
                 <View style={styles.formContainer}>
                     <TextInput dense={true} label="Email Address" mode="outlined" style={styles.inputContainerStyle} />
-                    <TextInput dense={true} label="Password" mode="outlined" style={styles.inputContainerStyle} right={
-                        <TextInput.Icon
-                            name={'eye'} // name={'eye-off}
-                            forceTextInputFocus={false}
-                        />
-                    } />
-                    <Button mode="contained" onPress={() => navigation.goBack()}>SIGN IN</Button>
+                    <Button mode="contained" onPress={() => navigation.goBack()}>RESET PASSWORD</Button>
                 </View>
 
                 <View style={styles.row} >
-                    <Text onPress={() => navigation.navigate('SignUpScreen')}>Haven't registered yet? SIGN UP</Text>
-                    <Text onPress={() => navigation.navigate('ForgotPasswordScreen')}>Forgot Password?</Text>
+                    <Text onPress={() => navigation.goBack()}>Back to SIGN IN</Text>
                 </View>
             </SafeAreaView>
         </ScrollView>
@@ -55,4 +48,4 @@ const styles = StyleSheet.create({
         paddingTop: 25
     }
 })
-export default SignInScreen
+export default ForgotPasswordScreen

@@ -21,7 +21,7 @@ const SettingsScreen = () => {
                 title="Dark Mode"
                 left={(props) => <List.Icon {...props} icon="theme-light-dark" />}
             />
-            <List.Item title="Log Out"
+            <List.Item title="Sign Out"
                 left={(props) => <List.Icon {...props} icon="logout" />}
             />
         </ScrollView>
